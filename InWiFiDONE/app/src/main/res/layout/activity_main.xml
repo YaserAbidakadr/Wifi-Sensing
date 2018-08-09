@@ -1,0 +1,118 @@
+<!--
+   Copyright 2018 Google Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.gc.crc.rnad.indoorwifi.IndoorWifiSensingMainActivity">
+
+  <android.opengl.GLSurfaceView
+      android:id="@+id/surfaceview"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_gravity="top"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true">
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_button_string" />
+
+    <Button
+        android:id="@+id/resolve_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resolve_button_text" />
+
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/publishMessage"
+      android:layout_width="86dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentTop="true"
+      android:text="subscribe" />
+
+  <EditText
+      android:id="@+id/publishMessage2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
+      android:layout_marginBottom="46dp"
+      android:layout_marginStart="35dp"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text="10"
+      android:visibility="invisible" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="61dp"
+      android:visibility="visible" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:onClick="displayDetails"
+      android:text="WifiInfo" />
+
+  <Button
+      android:id="@+id/graph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_toEndOf="@+id/button"
+      android:onClick="onButtonClick"
+      android:text="graph" />
+
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/textView"
+      android:layout_toEndOf="@+id/graph"
+      android:onClick="onBtnPostClick"
+      android:text="Button"
+      android:visibility="invisible" />
+
+  <EditText
+      android:id="@+id/hello"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignTop="@+id/publishMessage2"
+      android:layout_marginStart="48dp"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text="Name"
+      android:visibility="invisible" />
+
+</RelativeLayout>
